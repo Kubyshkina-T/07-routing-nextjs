@@ -1,5 +1,4 @@
-import { fetchNotes } from "@/lib/api";
-import NoteList from "@/components/NoteList/NoteList";
+import NotesClient from "../../Notes.client";
 
 type Props = {
     params: Promise<{ slug: string[] }>;
@@ -7,10 +6,9 @@ type Props = {
 const NotesByCategory = async ({params}: Props) => {
     const { slug } = await params;
     const tag = slug[0] === 'all' ? undefined : slug[0];
-    const response = await fetchNotes(1, 12, "",tag);
 
     return(<div>
-        {response?.notes?.length > 0 && <NoteList notes={response.notes}/>}
+        <NotesClient tag={tag} />
    </div>);
 };
 
