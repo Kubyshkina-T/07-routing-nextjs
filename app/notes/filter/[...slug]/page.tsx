@@ -10,7 +10,6 @@ const NotesByCategory = async ({params}: Props) => {
     const response = await fetchNotes(1, 12, "",tag);
 
     return(<div>
-        <h1>Notes List</h1>
         {response?.notes?.length > 0 && <NoteList notes={response.notes}/>}
    </div>);
 };
