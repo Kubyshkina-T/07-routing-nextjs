@@ -55,7 +55,7 @@
 // }
 
 
-import NotePreview from "@/components/NotePreview/NotePreview";
+import NotePreview from "@/app/@modal/(.)notes/[id]/NotePreview.client";
 
 type Props = {
   params: Promise<{ id: string }>;
