@@ -34,6 +34,7 @@ export default function NotePreview({ id }: Props) {
           <h2 className={css.h2}>{data.title}</h2>
           <p className={css.content}>{data.content}</p>
           <span className={css.tag}>{data.tag}</span>
+          <p className={css.date}>{data.createdAt }</p>
         </div>
       )}
     </Modal>
